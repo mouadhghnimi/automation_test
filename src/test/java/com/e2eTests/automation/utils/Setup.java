@@ -1,6 +1,5 @@
 package com.e2eTests.automation.utils;
 
-import com.sun.org.apache.bcel.internal.generic.SWITCH;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 import org.openqa.selenium.Platform;
@@ -34,6 +33,7 @@ public class Setup {
 
                 ChromeOptions chromeoptions = new ChromeOptions();
                 chromeoptions.addArguments("[start-maximzed]");
+                chromeoptions.addArguments("--disable-search-engine-choice-screen");
                 driver = new ChromeDriver(chromeoptions);
                 break;
 
